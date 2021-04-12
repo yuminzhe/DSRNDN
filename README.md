@@ -24,22 +24,22 @@ pip install tf_learn==0.32
 ## Usage
 ### Generate multiple sequence alignments
 
-1.Install HHsuite for MSA generation (https://github.com/soedinglab/hh-suite)</br>
+1.Install HHsuite for MSA generation (https://github.com/soedinglab/hh-suite).</br>
 In addition to the HHsuite package itself, download the HHsuite-specific sequence database and unzip it into a folder. The sequence database can be downloaded from https://uniclust.mmseqs.com.
 
-2.Install EVcouplings for generating MSAs by jackhmmer </br>
+2.Install EVcouplings for generating MSAs by jackhmmer. </br>
 It is available at https://github.com/debbiemarkslab/EVcouplings . The sequence database can be downloaded from https://www.uniprot.org/uniref/.
 
 
 ### Feature extraction
 
-1.Get CCMpred feature</br>
+1.Get CCMpred feature.</br>
 Install CCMpred to generate feature (https://github.com/soedinglab/CCMpred).
 Run the following code  to get CCMpred feature.
 ```bash
 ccmpred [options] input.aln output.mat
 ```
-2.Get ESM-1b feature</br>
+2.Get ESM-1b feature.</br>
 Install Evolutionary Scale Modeling to generate feature(https://github.com/facebookresearch/esm). <br>
 The specific steps are as follows:<br>
 (Ⅰ)Download the pretrained model from PyTorch Hub.
