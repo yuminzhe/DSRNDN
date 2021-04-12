@@ -12,6 +12,7 @@ python
 ```
 
 * PyPI  
+
 Directly install the required packages from PyPI.
 
 ```bash
@@ -19,16 +20,11 @@ pip install tensorflow==1.14.0
 pip install tf_learn==0.32
 
 ```
-We recommend using conda to install hhsuite:
-```bash
-conda install -c conga-forge -c bioconda hhsuite 
-```
-
 
 ## Usage
 ### Generate multiple sequence alignments
 
-1.Install HHsuite for MSA generation (https://github.com/soedinglab/hh-suite)
+1.Install HHsuite for MSA generation (https://github.com/soedinglab/hh-suite)</br>
 In addition to the HHsuite package itself, download the HHsuite-specific sequence database and unzip it into a folder. The sequence database can be downloaded from https://uniclust.mmseqs.com.
 
 2.Install EVcouplings for generating MSAs by jackhmmer 
