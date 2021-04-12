@@ -27,20 +27,20 @@ pip install tf_learn==0.32
 1.Install HHsuite for MSA generation (https://github.com/soedinglab/hh-suite)</br>
 In addition to the HHsuite package itself, download the HHsuite-specific sequence database and unzip it into a folder. The sequence database can be downloaded from https://uniclust.mmseqs.com.
 
-2.Install EVcouplings for generating MSAs by jackhmmer 
+2.Install EVcouplings for generating MSAs by jackhmmer </br>
 It is available at https://github.com/debbiemarkslab/EVcouplings . Although the whole package will be installed, only the MSA generation module will be used.The sequence database can be downloaded from https://www.uniprot.org/uniref/.
 
 
 ### Feature extraction
 
-1.Get CCMpred feature
+1.Get CCMpred feature</br>
 Install CCMpred from https://github.com/soedinglab/CCMpred
 Then you can run the following code in your command lines to get CCMpred feature.
 ```bash
 ccmpred [options] input.aln output.mat
 ```
 
-2.Get ESM-1b feature
+2.Get ESM-1b feature</br>
 Install Evolutionary Scale Modeling from https://github.com/facebookresearch/esm. We used ESM-1b embedding before, and now facebookresearch has launched a new model (ESM-MSA-1).
 The use steps are as follows：
 
@@ -69,7 +69,7 @@ with torch.no_grad():
     results = model(batch_tokens, repr_layers=[33], return_contacts=True)
 token_representations = results["representations"][33]
 ```
-3.Get other 1D and 2D features
+3.Get other 1D and 2D features</br>
 How to get other 1D and 2D features can be viewed in feature_extraction.py
 
 ### How to train
