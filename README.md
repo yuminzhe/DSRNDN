@@ -45,7 +45,7 @@ ccmpred [options] input.aln output.mat
 ```
 
 2.Get ESM-1b feature
-Install Evolutionary Scale Modeling from https://github.com/facebookresearch/esm.We used ESM-1b embedding before, and now facebookresearch has launched a new model (ESM-MSA-1).
+Install Evolutionary Scale Modeling from https://github.com/facebookresearch/esm. We used ESM-1b embedding before, and now facebookresearch has launched a new model (ESM-MSA-1).
 The use steps are as follows：
 
 It supports PyTorch Hub
