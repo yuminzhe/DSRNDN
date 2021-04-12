@@ -88,4 +88,5 @@ Finally, run the following command line to start training
 ```bash
 python train.py
 ```
-
+![predicted contact map of 4xmq](https://github.com/yuminzhe/DSRNDN/blob/master/DSRNDN/pic/4xmq.png)
+![predicted contact map of T1000D2](https://github.com/yuminzhe/DSRNDN/blob/master/DSRNDN/pic/T1000D2.png.png)
