@@ -28,28 +28,26 @@ pip install tf_learn==0.32
 In addition to the HHsuite package itself, download the HHsuite-specific sequence database and unzip it into a folder. The sequence database can be downloaded from https://uniclust.mmseqs.com.
 
 2.Install EVcouplings for generating MSAs by jackhmmer </br>
-It is available at https://github.com/debbiemarkslab/EVcouplings . Although the whole package will be installed, only the MSA generation module will be used.The sequence database can be downloaded from https://www.uniprot.org/uniref/.
+It is available at https://github.com/debbiemarkslab/EVcouplings . The sequence database can be downloaded from https://www.uniprot.org/uniref/.
 
 
 ### Feature extraction
 
 1.Get CCMpred feature</br>
-Install CCMpred from https://github.com/soedinglab/CCMpred
-Then you can run the following code in your command lines to get CCMpred feature.
+Install CCMpred to generate feature (https://github.com/soedinglab/CCMpred).
+Run the following code  to get CCMpred feature.
 ```bash
 ccmpred [options] input.aln output.mat
 ```
-
 2.Get ESM-1b feature</br>
-Install Evolutionary Scale Modeling from https://github.com/facebookresearch/esm. We used ESM-1b embedding before, and now facebookresearch has launched a new model (ESM-MSA-1).
-The use steps are as follows：
-
-It supports PyTorch Hub
+Install Evolutionary Scale Modeling to generate feature(https://github.com/facebookresearch/esm). <br>
+The specific steps are as follows:<br>
+(Ⅰ)Download the pretrained model from PyTorch Hub.
 ```bash
 import torch
 model, alphabet = torch.hub.load("facebookresearch/esm", "esm1b_t33_650M_UR50S")
 ```
-Then, you can load and use a pretrained model as follows:
+(Ⅱ)Then, you can load and use the pretrained model as follows:
 ```bash
 import torch
 import esm
@@ -70,16 +68,16 @@ with torch.no_grad():
 token_representations = results["representations"][33]
 ```
 3.Get other 1D and 2D features</br>
-How to get other 1D and 2D features can be viewed in feature_extraction.py
+How to get other 1D and 2D features can be viewed in https://github.com/yuminzhe/DSRNDN/blob/master/DSRNDN/feature_extraction.py.<br> 
 ![predicted contact map of 4xmq](https://github.com/yuminzhe/DSRNDN/blob/master/DSRNDN/pic/feature.jpg)<br>
 
 ### How to train
-In order to reduce the feature reading time, the extracted features are packaged into pkl format in the form of a dictionary
+First, we need to package the 1D features and 2D features in the form of a dictionary into pkl format.
 ```bash
 with open('../raw_data/feature.pkl','wb') as f:
     pickle.dump(d1,f)
 ```
-Then modify the training set path of config.py
+Then we need modify the training path in the https://github.com/yuminzhe/DSRNDN/blob/master/DSRNDN/libs/config/config.py.
 ```bash
 tf.app.flags.DEFINE_string(
     'train_file', 'pdb_train.pkl',
