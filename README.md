@@ -71,6 +71,7 @@ token_representations = results["representations"][33]
 ```
 3.Get other 1D and 2D features</br>
 How to get other 1D and 2D features can be viewed in feature_extraction.py
+![predicted contact map of 4xmq](https://github.com/yuminzhe/DSRNDN/blob/master/DSRNDN/pic/feature.jpg)<br>
 
 ### How to train
 In order to reduce the feature reading time, the extracted features are packaged into pkl format in the form of a dictionary
