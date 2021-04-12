@@ -33,15 +33,16 @@ It is available at https://github.com/debbiemarkslab/EVcouplings . The sequence 
 
 ### Feature extraction
 
-1.Get CCMpred feature.</br>
+1.Get CCMpred feature</br>
 Install CCMpred to generate feature (https://github.com/soedinglab/CCMpred).
 Run the following code  to get CCMpred feature.
 ```bash
 ccmpred [options] input.aln output.mat
 ```
-2.Get ESM-1b feature.</br>
+2.Get ESM-1b feature</br>
 Install Evolutionary Scale Modeling to generate feature(https://github.com/facebookresearch/esm). <br>
 The specific steps are as follows:<br>
+</br>
 (Ⅰ)Download the pretrained model from PyTorch Hub.
 ```bash
 import torch
