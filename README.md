@@ -72,7 +72,7 @@ with torch.no_grad():
 token_representations = results["representations"][33]
 ```
 The result is as follows. <br>
-![predicted contact map of 4xmq](https://github.com/yuminzhe/DSRNDN/blob/master/DSRNDN/pic/esm-1b.jpg)<br>
+![predicted contact map of 4xmq](https://github.com/yuminzhe/DSRNDN/blob/master/DSRNDN/pic/esm1b.jpg)<br>
 3.Get other 1D and 2D features</br>
 How to get other 1D and 2D features can be viewed in https://github.com/yuminzhe/DSRNDN/blob/master/DSRNDN/feature_extraction.py.<br> 
 The result is as follows. <br>
