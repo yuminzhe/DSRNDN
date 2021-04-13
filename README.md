@@ -39,7 +39,7 @@ Run the following code  to get CCMpred feature.
 ```bash
 ccmpred [options] input.aln output.mat
 ```
-Then you will get the following file <br>
+The result is as follows. <br>
 ![predicted contact map of 4xmq](https://github.com/yuminzhe/DSRNDN/blob/master/DSRNDN/pic/ccmpred.jpg)<br>
 
 2.Get ESM-1b feature</br>
@@ -71,10 +71,11 @@ with torch.no_grad():
     results = model(batch_tokens, repr_layers=[33], return_contacts=True)
 token_representations = results["representations"][33]
 ```
-Then you will get the following result <br>
-![predicted contact map of 4xmq](https://github.com/yuminzhe/DSRNDN/blob/master/DSRNDN/pic/esm1b.jpg)<br>
+The result is as follows. <br>
+![predicted contact map of 4xmq](https://github.com/yuminzhe/DSRNDN/blob/master/DSRNDN/pic/esm-1b.jpg)<br>
 3.Get other 1D and 2D features</br>
 How to get other 1D and 2D features can be viewed in https://github.com/yuminzhe/DSRNDN/blob/master/DSRNDN/feature_extraction.py.<br> 
+The result is as follows. <br>
 ![predicted contact map of 4xmq](https://github.com/yuminzhe/DSRNDN/blob/master/DSRNDN/pic/feature.jpg)<br>
 
 ### How to train
